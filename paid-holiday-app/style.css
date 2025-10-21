@@ -12,6 +12,11 @@ Version: 1.0
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  ::before,
+  ::after {
+    border: none;
+  }
+  border-color: currentColor;
   font-family: var(--font-primary);
 }
 
@@ -70,12 +75,18 @@ Version: 1.0
 
   /* ---SPACE--- */
   --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
   --space-24: 24px;
   --space-40: 40px;
   --space-48: 48px;
 
   /* ---ROUNDED--- */
+  --rounded-10: 10px;
   --rounded-20: 20px;
+
+  /* ---TRANSITIONS--- */
+  --transition-02s: all 0.2s ease-in-out;
 
   /* ---TEXT--- */
   --font-primary: "Roboto", sans-serif;
@@ -90,6 +101,7 @@ Version: 1.0
 
   --font-weight-regular-400: 400;
   --font-weight-medium-500: 500;
+  --font-weight-medium-600: 600;
 
   --txt-color-BW-50: #f4f5f7;
   --txt-color-BW-100: #e9e9eb;
@@ -132,7 +144,8 @@ Version: 1.0
 h1,
 h2,
 h4,
-h5 {
+h5,
+p {
   font-weight: var(--font-weight-regular-400);
   color: var(--txt-color-blue-700);
 }
@@ -156,6 +169,7 @@ h4 {
   font-size: var(--font-size-20);
 }
 
-h5 {
+h5,
+p {
   font-size: var(--font-size-16);
 }

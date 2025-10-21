@@ -33,6 +33,14 @@
             <h5>Congés restants</h5>
           </div>
         </div>
+        <div class="reminder-container">
+          <h4>Petit rappel :</h4>
+          <div class="reminder-card-container">
+            <h5>Tes prochaines vacances :</h5>
+            <p>Du <span>06/07/2025 </span> au <span>10/07/2025</span></p>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">Demander mes congés</button>
       </div>
     </div>
   </div>

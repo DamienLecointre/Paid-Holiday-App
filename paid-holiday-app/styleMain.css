@@ -19,7 +19,7 @@
   flex-direction: column;
 }
 
-.title-container {
+.left-container .title-container {
   width: 100%;
   padding-top: var(--space-12);
   padding-bottom: var(--space-12);
@@ -61,13 +61,18 @@
 .icon-container {
   width: 100%;
   display: flex;
-  gap: var(--space-12);
+  gap: var(--space-16);
 }
 
 .icon {
   font-size: var(--font-size-20);
   color: var(--txt-color-blue-400);
   cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.icon:hover {
+  transform: scale(1.2);
 }
 
 .avatar-container {
@@ -85,7 +90,14 @@
   height: 40px;
   width: 40px;
   background: var(--color-blue-400);
+  border: 1px solid var(--color-blue-50);
   border-radius: 150px;
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.avatar:hover {
+  transform: scale(1.1);
 }
 
 .right-container .title-container {
@@ -109,6 +121,8 @@
   justify-content: center;
   background: var(--color-blue-400);
   border-radius: 150px;
+  mask: radial-gradient(circle, transparent 60px, black 51px);
+  -webkit-mask: radial-gradient(circle, transparent 60px, black 51px);
 }
 
 .graph-legende {
@@ -124,4 +138,48 @@
   width: 16px;
   background: var(--color-blue-400);
   border-radius: 150px;
+}
+
+.reminder-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-12);
+}
+
+.reminder-card-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-blue-100);
+  border-radius: var(--rounded-10);
+  border: 1px solid var(--color-blue-50);
+  padding: var(--space-16);
+  row-gap: var(--space-12);
+}
+
+.reminder-card-container span {
+  font-weight: var(--font-weight-medium-600);
+}
+
+.btn-submit {
+  outline: none;
+  width: 100%;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--txt-color-BW-50);
+  background: var(--color-red-300);
+  padding: var(--space-12) var(--space-20);
+  border-radius: var(--rounded-10);
+  border-right: 2px solid var(--color-BW-50);
+  border-bottom: 2px solid var(--color-BW-50);
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.btn-submit:hover {
+  transform: scale(1.05);
+  border-left: 2px solid var(--color-BW-50);
+  border-top: 2px solid var(--color-BW-50);
+  border-right: none;
+  border-bottom: none;
 }
