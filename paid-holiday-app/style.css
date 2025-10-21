@@ -1,0 +1,161 @@
+/*
+Theme Name: Mon thème demande de congés payé app
+Author: Damien Lecointre
+Description: Application pour des demandes de congés
+Version: 1.0
+*/
+
+/* ---ERASE--- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: var(--font-primary);
+}
+
+/* ---VARIABLES--- */
+
+:root {
+  /* ---COLORS--- */
+  --color-BW-50: #f4f5f7;
+  --color-BW-100: #e9e9eb;
+  --color-BW-200: #d1d2d4;
+  --color-BW-300: #b5b6b8;
+  --color-BW-400: #939598;
+  --color-BW-500: #77797c;
+  --color-BW-600: #3b4a4e;
+  --color-BW-700: #323437;
+  --color-BW-800: #1e2428;
+  --color-BW-900: #00102e;
+  --color-BW-950: #000000;
+
+  --color-blue-50: #dfebff;
+  --color-blue-100: #c6dbff;
+  --color-blue-200: #a7c7ff;
+  --color-blue-300: #85aeff;
+  --color-blue-400: #3f86ff;
+  --color-blue-500: #316ce0;
+  --color-blue-600: #2553b8;
+  --color-blue-700: #1c4297;
+  --color-blue-800: #16367a;
+  --color-blue-900: #0d224e;
+  --color-blue-950: #050e23;
+
+  --color-red-25: #fff5f6;
+  --color-red-50: #ffe1e3;
+  --color-red-100: #ffc7cb;
+  --color-red-200: #ff9fa6;
+  --color-red-300: #ff6d76;
+  --color-red-400: #ff2e3c;
+  --color-red-500: #e02632;
+  --color-red-600: #c11f29;
+  --color-red-700: #9e1a23;
+  --color-red-800: #7d151c;
+  --color-red-900: #4a0c11;
+  --color-red-950: #1f0507;
+
+  --bg-gradient-red-to-blue: linear-gradient(
+    to top,
+    var(--color-red-50) 0%,
+    var(--color-blue-50) 65%,
+    var(--color-blue-200) 100%
+  );
+  --bg-gradient-blue: linear-gradient(
+    10deg,
+    var(#3f86ff33) 0%,
+    var(#a7c7ff33) 100%
+  );
+
+  /* ---SPACE--- */
+  --space-12: 12px;
+  --space-24: 24px;
+  --space-40: 40px;
+  --space-48: 48px;
+
+  /* ---ROUNDED--- */
+  --rounded-20: 20px;
+
+  /* ---TEXT--- */
+  --font-primary: "Roboto", sans-serif;
+
+  --font-size-40: 40px;
+  --font-size-32: 32px;
+  --font-size-24: 24px;
+  --font-size-20: 20px;
+  --font-size-16: 16px;
+  --font-size-12: 12px;
+  --font-size-10: 10px;
+
+  --font-weight-regular-400: 400;
+  --font-weight-medium-500: 500;
+
+  --txt-color-BW-50: #f4f5f7;
+  --txt-color-BW-100: #e9e9eb;
+  --txt-color-BW-200: #d1d2d4;
+  --txt-color-BW-300: #b5b6b8;
+  --txt-color-BW-400: #939598;
+  --txt-color-BW-500: #77797c;
+  --txt-color-BW-600: #3b4a4e;
+  --txt-color-BW-700: #323437;
+  --txt-color-BW-800: #1e2428;
+  --txt-color-BW-900: #00102e;
+  --txt-color-BW-950: #000000;
+
+  --txt-color-blue-50: #dfebff;
+  --txt-color-blue-100: #c6dbff;
+  --txt-color-blue-200: #a7c7ff;
+  --txt-color-blue-300: #85aeff;
+  --txt-color-blue-400: #3f86ff;
+  --txt-color-blue-500: #316ce0;
+  --txt-color-blue-600: #2553b8;
+  --txt-color-blue-700: #1c4297;
+  --txt-color-blue-800: #16367a;
+  --txt-color-blue-900: #0d224e;
+  --txt-color-blue-950: #050e23;
+
+  --txt-color-red-25: #fff5f6;
+  --txt-color-red-50: #ffe1e3;
+  --txt-color-red-100: #ffc7cb;
+  --txt-color-red-200: #ff9fa6;
+  --txt-color-red-300: #ff6d76;
+  --txt-color-red-400: #ff2e3c;
+  --txt-color-red-500: #e02632;
+  --txt-color-red-600: #c11f29;
+  --txt-color-red-700: #9e1a23;
+  --txt-color-red-800: #7d151c;
+  --txt-color-red-900: #4a0c11;
+  --txt-color-red-950: #1f0507;
+}
+
+h1,
+h2,
+h4,
+h5 {
+  font-weight: var(--font-weight-regular-400);
+  color: var(--txt-color-blue-700);
+}
+
+h1 {
+  font-size: var(--font-size-40);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--font-size-32);
+}
+
+h3 {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-medium-500);
+  color: var(--txt-color-blue-700);
+}
+
+h4 {
+  font-size: var(--font-size-20);
+}
+
+h5 {
+  font-size: var(--font-size-16);
+}
