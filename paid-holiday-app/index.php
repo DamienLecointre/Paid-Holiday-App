@@ -6,7 +6,26 @@
       <div class="title-container">
         <h1>It's time to chill !!!</h1>
       </div>
-      <div class="card"></div>
+      <div class="card">
+        <div class="overview-header-container">
+          <h2>Vue d'ensemble</h2>
+          <div class="legend-container">
+            <div class="legend-wrapper">
+              <div class="color-legend"></div>
+              <h5>Congés à venir</h5>
+            </div>
+            <div class="legend-wrapper">
+              <div class="color-legend"></div>
+              <h5>Congés pris</h5>
+            </div>
+            <div class="legend-wrapper">
+              <div class="color-legend"></div>
+              <h5>Maladie</h5>
+            </div>
+          </div>
+          <button class="btn-blue">Mode liste</button>
+        </div>
+      </div>
     </div>
 
     <div class="right-container">
@@ -28,8 +47,8 @@
           <div class="graph">
             <h3 class="graph-number">18/25</h3> <!-- 18=VALEUR DYN -->
           </div>
-          <div class="graph-legende">
-            <div class="color-legende"></div>
+          <div class="graph-legend">
+            <div class="color-legend"></div>
             <h5>Congés restants</h5>
           </div>
         </div>

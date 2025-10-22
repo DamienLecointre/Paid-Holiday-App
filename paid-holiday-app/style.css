@@ -73,7 +73,11 @@ Version: 1.0
     var(#a7c7ff33) 100%
   );
 
+  /* ---BOX SHADOW--- */
+  --shadow-light-blue: 5px 8px 20px 0px rgba(63, 134, 255, 0.2);
+
   /* ---SPACE--- */
+  --space-08: 08px;
   --space-12: 12px;
   --space-16: 16px;
   --space-20: 20px;
