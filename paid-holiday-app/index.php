@@ -4,7 +4,7 @@
 
     <div class="left-container">
       <div class="title-container">
-        <h1>It's time to chill !!!</h1>
+        <h1>Tableau de bord</h1>
       </div>
       <div class="card">
         <div class="overview-header-container">
@@ -25,6 +25,7 @@
           </div>
           <button class="btn-blue">Mode liste</button>
         </div>
+        <div id="calendar"></div>
       </div>
     </div>
 
@@ -45,6 +46,7 @@
         </div>
         <div class="graph-container">
           <div class="graph">
+            <canvas id="myDoughnutGraph" width="150" height="150"></canvas>
             <h3 class="graph-number">18/25</h3> <!-- 18=VALEUR DYN -->
           </div>
           <div class="graph-legend">

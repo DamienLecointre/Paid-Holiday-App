@@ -41,6 +41,7 @@
   border-left: 2px solid var(--color-BW-50);
   backdrop-filter: blur(10px);
   padding: var(--space-24);
+  overflow: hidden;
 }
 
 .overview-header-container {
@@ -48,6 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: var(--space-24);
 }
 
 .legend-container {
@@ -174,16 +176,24 @@
 }
 
 .graph {
+  position: relative;
   height: 200px;
   width: 200px;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-blue-400);
+  /* background: var(--color-blue-400);
   border-radius: 150px;
   mask: radial-gradient(circle, transparent 60px, black 51px);
-  -webkit-mask: radial-gradient(circle, transparent 60px, black 51px);
+  -webkit-mask: radial-gradient(circle, transparent 60px, black 51px); */
+}
+
+.graph-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .graph-legend {
@@ -195,7 +205,7 @@
 }
 
 .graph-legend .color-legend {
-  background: var(--color-blue-400);
+  background: var(--color-blue-300);
 }
 
 .reminder-container {
