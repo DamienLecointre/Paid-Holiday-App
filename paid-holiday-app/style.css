@@ -77,6 +77,7 @@ Version: 1.0
   --shadow-light-blue: 5px 8px 20px 0px rgba(63, 134, 255, 0.2);
 
   /* ---SPACE--- */
+  --space-06: 06px;
   --space-08: 08px;
   --space-12: 12px;
   --space-16: 16px;
@@ -86,6 +87,7 @@ Version: 1.0
   --space-48: 48px;
 
   /* ---ROUNDED--- */
+  --rounded-05: 5px;
   --rounded-10: 10px;
   --rounded-20: 20px;
 

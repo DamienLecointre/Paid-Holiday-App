@@ -6,7 +6,7 @@
       <div class="title-container">
         <h1>Tableau de bord</h1>
       </div>
-      <div class="card">
+      <div class="card left-card">
         <div class="overview-header-container">
           <h2>Vue d'ensemble</h2>
           <div class="legend-container">
@@ -25,7 +25,9 @@
           </div>
           <button class="btn-blue">Mode liste</button>
         </div>
-        <div id="calendar"></div>
+        <div class="calendar-container">
+          <div id="calendar"></div>
+        </div>
       </div>
     </div>
 
@@ -61,7 +63,9 @@
             <p>Du <span>06/07/2025 </span> au <span>10/07/2025</span></p>
           </div>
         </div>
-        <button type="submit" class="btn-submit">Demander mes congés</button>
+        <div class="btn-submit-container">
+          <button type="submit" class="btn-submit">Demander mes congés</button>
+        </div>
       </div>
     </div>
   </div>

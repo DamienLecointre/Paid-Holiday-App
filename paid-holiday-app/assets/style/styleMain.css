@@ -98,6 +98,179 @@
   transition: var(--transition-02s);
 }
 
+.calendar-container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: var(--space-24);
+}
+
+.calendar-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------
+---CALENDAR CUSTOM---
+------------------ */
+
+/* =========================================================
+   ROOT / STRUCTURE GLOBALE
+========================================================= */
+
+/* Racine du calendrier */
+.fc {
+  /* (aucun style ajouté ici pour l’instant) */
+}
+
+/* Structure principale du calendrier (multimois) */
+.fc .fc-multimonth {
+  border: none;
+  gap: 1rem; /* espace entre les mois */
+  overflow: initial; /* éviter les coupures d’affichage */
+  padding-bottom: 50px;
+}
+
+/* Structure multi-colonnes (ex: 4 mois par ligne) */
+.fc .fc-multimonth-multicol .fc-multimonth-month {
+  padding: 0;
+}
+
+/* Chaque mois individuel */
+.fc .fc-multimonth-month {
+  flex: 1 1 calc(25% - 1rem); /* 4 colonnes par ligne */
+  box-sizing: border-box; /* évite les débordements */
+}
+
+/* =========================================================
+   HEADER (nom des mois + jours de la semaine)
+========================================================= */
+
+/* Conteneur regroupant tous les noms des mois + jours */
+.fc-multimonth-month {
+  /* background: red; */
+}
+
+/* En-tête principale d’un mois (nom du mois) */
+.fc .fc-multimonth-title {
+  /* background: green; */
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--color-blue-700);
+  text-transform: capitalize;
+  text-align: left;
+  padding: 0 0 var(--space-12) 4px;
+}
+
+/* En-tête collante en vue single column */
+.fc-media-screen .fc-multimonth-singlecol .fc-multimonth-header {
+  position: relative;
+}
+
+/* En-tête des jours de la semaine */
+.fc .fc-col-header-cell-cushion {
+  padding: 0 0 var(--space-06);
+}
+
+.fc-col-header-cell-cushion {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--color-blue-700);
+  text-transform: capitalize;
+  /* background: brown; */
+}
+
+/* =========================================================
+   GRILLE DES JOURS
+========================================================= */
+
+/* Conteneur des jours du mois (1–31) */
+.fc .fc-multimonth-daygrid {
+  /* background: purple; */
+}
+
+/* Cellule d’un jour */
+.fc-daygrid-day {
+  height: 24px;
+  width: 24px;
+  /* background: pink; */
+}
+
+/* Cellule du jour actuel */
+.fc-daygrid-day.fc-day-today {
+  /* background: blue; */
+}
+
+/* Jour contenant un événement */
+.fc-daygrid-day.fc-event-day {
+  /* background: yellow; */
+}
+
+/* Cadre intérieur d’un jour */
+.fc-daygrid-day-frame {
+  border-radius: var(--rounded-05);
+}
+
+/* Numéro du jour (dans chaque case) */
+.fc-daygrid-day-top {
+  height: 100%;
+  width: 100%;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--color-blue-700);
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================================================
+   ÉTATS DES JOURS (passé / futur / aujourd’hui / désactivé)
+========================================================= */
+
+.fc .fc-day-disabled .fc-daygrid-day-frame {
+  background: var(--color-blue-50);
+}
+
+.fc .fc-day-disabled {
+  background: none;
+}
+
+.fc-day-past .fc-daygrid-day-frame,
+.fc-day-future .fc-daygrid-day-frame,
+.fc-day-today .fc-daygrid-day-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-blue-200);
+}
+
+.fc-day-today .fc-daygrid-day-frame {
+  border: 2px solid var(--color-blue-700);
+}
+
+/* =========================================================
+   TABLE STYLING / GLOBAL RESET
+========================================================= */
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+  border: none;
+}
+
+.fc td {
+  padding: 3px;
+}
+
+/* =========================================================
+   TRANSPARENCE / FOND / COULEURS GLOBALES
+========================================================= */
+
+.fc .fc-multimonth-daygrid,
+.fc .fc-multimonth-singlecol .fc-multimonth-header,
+.fc .fc-daygrid-day.fc-day-today {
+  background: none;
+}
+
 /* ------------------
 ---RIGHT CONTAINER---
 ------------------ */
@@ -229,8 +402,16 @@
   font-weight: var(--font-weight-medium-600);
 }
 
+.btn-submit-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
 .btn-submit {
   outline: none;
+  height: fit-content;
   width: 100%;
   font-size: var(--font-size-20);
   font-weight: var(--font-weight-regular-400);
