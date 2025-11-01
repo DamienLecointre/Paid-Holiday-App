@@ -58,3 +58,15 @@ function enqueue_fullcalendar_assets()
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_fullcalendar_assets');
+
+function enqueue_actions()
+{
+  wp_enqueue_script(
+    'actions',
+    get_template_directory_uri() . '/assets/javascript/actions.js',
+    [],
+    null,
+    true
+  );
+}
+add_action('wp_enqueue_scripts', 'enqueue_actions');

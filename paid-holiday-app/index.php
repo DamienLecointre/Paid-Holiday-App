@@ -4,7 +4,7 @@
 
     <div class="left-container">
       <div class="title-container">
-        <h1>Tableau de bord</h1>
+        <h1>Bienvenue sur ton tableau de bord</h1>
       </div>
       <div class="card">
         <div class="overview-header-container">
