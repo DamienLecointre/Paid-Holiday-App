@@ -1,0 +1,28 @@
+.container {
+  height: 100dvh;
+  width: 100dvw;
+  background: var(--bg-gradient-red-to-blue);
+  padding: var(--space-40);
+}
+
+.container-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: var(--space-48);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  background: var(--bg-gradient-blue);
+  box-shadow: var(--shadow-light-blue);
+  -webkit-box-shadow: var(--shadow-light-blue);
+  -moz-box-shadow: var(--shadow-light-blue);
+  border-radius: var(--rounded-20);
+  border-top: 2px solid var(--color-BW-50);
+  border-left: 2px solid var(--color-BW-50);
+  backdrop-filter: blur(10px);
+  padding: var(--space-24);
+  overflow: hidden;
+}

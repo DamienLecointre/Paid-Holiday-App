@@ -6,7 +6,7 @@
       <div class="title-container">
         <h1>Tableau de bord</h1>
       </div>
-      <div class="card left-card">
+      <div class="card">
         <div class="overview-header-container">
           <h2>Vue d'ensemble</h2>
           <div class="legend-container">
