@@ -40,7 +40,7 @@
   /* background: green; */
   font-size: var(--font-size-20);
   font-weight: var(--font-weight-regular-400);
-  color: var(--color-blue-700);
+  color: var(--txt-color-blue-700);
   text-transform: capitalize;
   text-align: left;
   padding: 0 0 var(--space-12) 4px;
@@ -59,7 +59,7 @@
 .fc-col-header-cell-cushion {
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular-400);
-  color: var(--color-blue-700);
+  color: var(--txt-color-blue-700);
   text-transform: capitalize;
   /* background: brown; */
 }
@@ -101,7 +101,7 @@
   width: 100%;
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-regular-400);
-  color: var(--color-blue-700);
+  color: var(--txt-color-blue-700);
   justify-content: center;
   align-items: center;
 }

@@ -17,12 +17,6 @@
   justify-content: space-between;
 }
 
-.icon-container {
-  width: 100%;
-  display: flex;
-  gap: var(--space-16);
-}
-
 .icon {
   font-size: var(--font-size-20);
   color: var(--txt-color-blue-400);
@@ -146,8 +140,7 @@
   transition: var(--transition-02s);
 }
 
-.btn-submit:hover,
-.btn-blue:hover {
+.btn-submit:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-light-blue);
   -webkit-box-shadow: var(--shadow-light-blue);

@@ -1,6 +1,39 @@
 <?php get_header(); ?>
 <main class="container">
+
+  <div class="login-signup-container">
+    <div class="login-signup-wrapper">
+      <div class="icon-container">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <form action="" class="login-form">
+        <input type="text" placeholder="Email">
+        <input type="password" placeholder="Mot de passe">
+        <button id="signup-access" class="btn-blue-link">Pas encore de compte ?</button>
+        <button type="submit" class="btn-blue-square-end">Se connecter</button>
+      </form>
+      <!-- <form action="" class="signup-form">
+        <input type="text" placeholder="Prénom">
+        <input type="text" placeholder="Nom">
+        <input type="email">
+        <input type="password" placeholder="Mot de passe">
+        <input type="password" placeholder="Confirmer le mot de passe">
+        <button type="submit" class="btn-blue-square-end">Créer mon compte</button>
+      </form> -->
+    </div>
+  </div>
+
   <div class="container-wrapper">
+
+
+    <!-- <div class="dates-selected-popup-container">
+      <form action="">
+        <input type="date" name="" id="">
+        <input type="date" name="" id="">
+      </form>
+    </div> -->
 
     <div class="left-container">
       <div class="title-container">
@@ -23,7 +56,7 @@
               <h5>Maladie</h5>
             </div>
           </div>
-          <button class="btn-blue">Mode liste</button>
+          <button class="btn-blue-rounded-end">Mode liste</button>
         </div>
         <div class="calendar-container">
           <div id="calendar"></div>
@@ -34,14 +67,12 @@
     <div class="right-container">
       <div class="card">
         <div class="header">
-          <div class="icon-container">
-            <i class="fa-solid fa-power-off icon"></i>
-            <i class="fa-regular fa-bell icon"></i>
-          </div>
-          <div class="avatar-container">
-            <h4 class="title">PRENOM</h4> <!-- PRENOM=VALEUR DYN -->
+          <i class="fa-regular fa-bell icon"></i>
+          <button id="login" class="btn-blue-rounded-end">Se connecter</button>
+          <!-- <div class="avatar-container">
+            <h4 class="title">PRENOM</h4>
             <div class="avatar"></div>
-          </div>
+          </div> -->
         </div>
         <div class="title-container">
           <h2>L'essentiel</h2>

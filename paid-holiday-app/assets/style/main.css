@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   height: 100dvh;
   width: 100dvw;
   background: var(--bg-gradient-red-to-blue);
@@ -22,7 +23,65 @@
   border-radius: var(--rounded-20);
   border-top: 2px solid var(--color-BW-50);
   border-left: 2px solid var(--color-BW-50);
-  backdrop-filter: blur(10px);
+  backdrop-filter: var(--blur-10);
   padding: var(--space-24);
   overflow: hidden;
+}
+
+.btn-blue-rounded-end {
+  outline: none;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular-400);
+  background: var(--color-blue-400);
+  color: var(--txt-color-BW-50);
+  padding: var(--space-08) var(--space-24);
+  border-radius: 150px;
+  border-top: none;
+  border-right: 2px solid var(--color-BW-50);
+  border-bottom: 2px solid var(--color-BW-50);
+  border-left: none;
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.btn-blue-square-end {
+  outline: none;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-regular-400);
+  background: var(--color-blue-400);
+  color: var(--txt-color-BW-50);
+  padding: var(--space-12) var(--space-24);
+  border-radius: var(--rounded-05);
+  border-top: none;
+  border-right: 2px solid var(--color-BW-50);
+  border-bottom: 2px solid var(--color-BW-50);
+  border-left: none;
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.btn-blue-rounded-end:hover,
+.btn-blue-square-end:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-light-blue);
+  -webkit-box-shadow: var(--shadow-light-blue);
+  -moz-box-shadow: var(--shadow-light-blue);
+}
+
+.btn-blue-link {
+  outline: none;
+  border: none;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-regular-400);
+  color: var(--color-blue-400);
+  background: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.btn-blue-link:hover {
+  transform: scale(1.1);
 }

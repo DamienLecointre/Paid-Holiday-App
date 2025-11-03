@@ -1,0 +1,104 @@
+.login-signup-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  background: rgb(198, 219, 255, 0.5);
+  backdrop-filter: var(--blur-10);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+}
+
+.show-login-signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: show 1s ease-in-out forwards;
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.login-signup-wrapper {
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gradient-blue-darker);
+  padding: var(--space-32);
+  border-radius: var(--rounded-20);
+  row-gap: var(--space-24);
+}
+
+.signup-form,
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: var(--space-24);
+}
+
+.icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--txt-color-BW-50);
+}
+
+.icon-wrapper {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-blue-400);
+  border-radius: 150px;
+  cursor: pointer;
+  transition: var(--transition-02s);
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.fa-xmark {
+  font-size: var(--font-size-20);
+}
+
+.signup-form input,
+.login-form input {
+  height: 40px;
+  outline: none;
+  width: 100%;
+  font-size: var(--font-size-16);
+  border: 1px solid var(--color-blue-400);
+  background: transparent;
+  color: var(--txt-color-blue-400);
+  border-radius: var(--rounded-10);
+  padding: var(--space-08) var(--space-16);
+}
+
+.signup-form input::placeholder,
+.login-form input::placeholder {
+  color: var(--txt-color-blue-400);
+}
+
+/* input:-internal-autofill-selected  {
+  background-color: transparent !important;
+  appearance:none !important;
+  color:red !important;
+} */
