@@ -2,7 +2,7 @@
 <main class="container">
 
   <div class="login-signup-container">
-    <div class="login-signup-wrapper">
+    <div class="login-wrapper">
       <div class="icon-container">
         <div class="icon-wrapper">
           <i class="fa-solid fa-xmark"></i>
@@ -14,14 +14,21 @@
         <button id="signup-access" class="btn-blue-link">Pas encore de compte ?</button>
         <button type="submit" class="btn-blue-square-end">Se connecter</button>
       </form>
-      <!-- <form action="" class="signup-form">
+    </div>
+    <div class="signup-wrapper">
+      <div class="icon-container">
+        <div class="icon-wrapper">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <form action="" class="signup-form">
         <input type="text" placeholder="Prénom">
         <input type="text" placeholder="Nom">
         <input type="email">
         <input type="password" placeholder="Mot de passe">
         <input type="password" placeholder="Confirmer le mot de passe">
         <button type="submit" class="btn-blue-square-end">Créer mon compte</button>
-      </form> -->
+      </form>
     </div>
   </div>
 
