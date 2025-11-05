@@ -27,6 +27,7 @@
         <input type="email">
         <input type="password" placeholder="Mot de passe">
         <input type="password" placeholder="Confirmer le mot de passe">
+        <button id="login-access" class="btn-blue-link">Déjà inscrit ?</button>
         <button type="submit" class="btn-blue-square-end">Créer mon compte</button>
       </form>
     </div>
