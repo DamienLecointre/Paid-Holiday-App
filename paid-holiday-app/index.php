@@ -1,5 +1,13 @@
 <?php get_header(); ?>
 <main class="container">
+  <?php
+  $current_user = wp_get_current_user();
+  $prenom = ($current_user->ID !== 0) ? $current_user->user_firstname : '';
+  ?>
+
+  <?php if (isset($_GET['success'])): ?>
+    <div class="message success">Compte créé avec succès</div>
+  <?php endif; ?>
 
   <div class="login-signup-container">
     <div class="login-wrapper">
@@ -8,9 +16,9 @@
           <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
-      <form action="" class="login-form">
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Mot de passe">
+      <form action="/paid-holiday-app/php/login.php" method="POST" class="login-form">
+        <input name="email" type="text" placeholder="Email">
+        <input name="password" type="password" placeholder="Mot de passe">
         <button id="signup-access" class="btn-blue-link">Pas encore de compte ?</button>
         <button type="submit" class="btn-blue-square-end">Se connecter</button>
       </form>
@@ -21,14 +29,13 @@
           <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
-      <form action="" class="signup-form">
-        <input type="text" placeholder="Prénom">
-        <input type="text" placeholder="Nom">
-        <input type="email">
-        <input type="password" placeholder="Mot de passe">
-        <input type="password" placeholder="Confirmer le mot de passe">
+      <form action="/paid-holiday-app/php/signup.php" method="POST" class="signup-form">
+        <input name="prenom" type="text" placeholder="Prénom" required>
+        <input name="nom" type="text" placeholder="Nom" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Mot de passe" required>
         <button id="login-access" class="btn-blue-link">Déjà inscrit ?</button>
-        <button type="submit" class="btn-blue-square-end">Créer mon compte</button>
+        <button id="signup" type="submit" class="btn-blue-square-end">Créer mon compte</button>
       </form>
     </div>
   </div>
@@ -76,12 +83,26 @@
       <div class="card">
         <div class="header">
           <i class="fa-regular fa-bell icon"></i>
-          <button id="login" class="btn-blue-rounded-end">Se connecter</button>
-          <!-- <div class="avatar-container">
-            <h4 class="title">PRENOM</h4>
-            <div class="avatar"></div>
-          </div> -->
+          <?php if ($prenom): ?>
+            <div class="avatar-container">
+              <h4 class="title"><?php echo esc_html(ucfirst($prenom)); ?></h4>
+              <div class="avatar">
+                <i class="fa-regular fa-user"></i>
+              </div>
+            </div>
+          <?php else: ?>
+            <button id="login" class="btn-blue-rounded-end">Se connecter</button>
+          <?php endif ?>
         </div>
+
+         <div class="profil-container">
+          <h5 class="link">profil</h5>
+          <div class="logout-container link">
+            <i class="fa-solid fa-power-off"></i>
+            <a href="/paid-holiday-app/php/logout.php">Se déconnecter</a>
+          </div>
+        </div>
+
         <div class="title-container">
           <h2>L'essentiel</h2>
         </div>

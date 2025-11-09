@@ -4,6 +4,7 @@
 }
 
 .right-container .card {
+  position: relative;
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -32,6 +33,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--space-12);
 }
 
@@ -42,6 +44,9 @@
 .avatar {
   height: 40px;
   width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--color-blue-400);
   border: 1px solid var(--color-blue-50);
   border-radius: 150px;
@@ -51,6 +56,10 @@
 
 .avatar:hover {
   transform: scale(1.1);
+}
+
+.avatar i {
+  color: var(--color-blue-100);
 }
 
 .right-container .title-container {

@@ -71,3 +71,6 @@ function enqueue_actions()
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_actions');
+add_filter('show_admin_bar', function($show) {
+    return current_user_can('administrator'); 
+});

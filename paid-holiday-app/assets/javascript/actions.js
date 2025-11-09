@@ -1,15 +1,19 @@
 // LOGIN VARIABLES
 const btnLogin = document.getElementById("login");
-const loginSignupContainer = document.querySelector(".login-signup-container ");
+const loginSignupContainer = document.querySelector(".login-signup-container");
 const loginWrapper = document.querySelector(".login-wrapper");
 const signupWrapper = document.querySelector(".signup-wrapper");
 const iconWrappers = document.querySelectorAll(".icon-wrapper");
 const signupAccess = document.getElementById("signup-access");
-const loginAccess =document.getElementById("login-access")
+const loginAccess =document.getElementById("login-access");
+
+// PROFIL VARIABLES
+const avatar=document.querySelector(".avatar");
+const profilContainer=document.querySelector(".profil-container")
 
 // SUBMIT VARIABLES
 const btnSubmit = document.querySelector(".btn-submit");
-// console.log(loginAccess);
+// console.log(avatar);
 
 // ___________________________________________________________
 // ___________________________________________________________
@@ -25,32 +29,58 @@ function add(variable,classe) {
 }
 
 // SE CONNECTER
-btnLogin.addEventListener("click", () => {
-  // console.log("login");
-  loginSignupContainer.classList.add("show-login-signup-container");
-  loginWrapper.classList.add("show-login-wrapper");
-});
+if (btnLogin) {
+  btnLogin.addEventListener("click", () => {
+    add(loginSignupContainer,"show-login-signup-container")
+    add(loginWrapper,"show-login-wrapper")
+  });
+}
 
 iconWrappers.forEach((icon) => {
   icon.addEventListener("click", () => {
-    // console.log("delete");
-    loginSignupContainer.classList.remove("show-login-signup-container");
-    signupWrapper.classList.remove("show-signup-wrapper");
+    remove(loginSignupContainer,"show-login-signup-container")
+    remove(signupWrapper,"show-signup-wrapper")
   });
 })
 
 signupAccess.addEventListener("click", (e) => {
-  // console.log("go to signup");
   e.preventDefault();
-  loginWrapper.classList.remove("show-login-wrapper");
-  signupWrapper.classList.add("show-signup-wrapper");
+  remove(loginWrapper,"show-login-wrapper")
+  add(signupWrapper,"show-signup-wrapper")
 });
 
 loginAccess.addEventListener("click",(e)=> {
    e.preventDefault();
-   signupWrapper.classList.remove("show-signup-wrapper");
-   loginWrapper.classList.add("show-login-wrapper");
+   remove(signupWrapper,"show-signup-wrapper")
+   add(loginWrapper,"show-login-wrapper")
 })
+
+// ACCES AU PROFIL
+isHovering=false
+
+avatar.addEventListener("mouseenter",()=> {
+  add(profilContainer,"show-profil-container")
+})
+
+avatar.addEventListener("mouseleave",()=> {
+  setTimeout(() => {
+    if(isHovering===false) {
+      remove(profilContainer,"show-profil-container")
+    } 
+  }, 300);
+})  
+
+profilContainer.addEventListener("mouseenter",()=> {
+  isHovering=true
+})
+
+profilContainer.addEventListener("mouseleave",()=> {
+  isHovering=false
+  setTimeout(() => {
+    remove(profilContainer,"show-profil-container")
+  }, 300);
+})
+
 
 // DEMANDE DE CONGES
 btnSubmit.addEventListener("click", () => {
