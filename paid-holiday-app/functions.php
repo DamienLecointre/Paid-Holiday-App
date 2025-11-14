@@ -71,6 +71,63 @@ function enqueue_actions()
   );
 }
 add_action('wp_enqueue_scripts', 'enqueue_actions');
-add_filter('show_admin_bar', function($show) {
-    return current_user_can('administrator'); 
+add_filter('show_admin_bar', function ($show) {
+  return current_user_can('administrator');
 });
+
+function handleRedirection($redirect_to, $requested_redirect_to, $user)
+{
+  if (isset($user->roles) && is_array($user->roles)) {
+    $userRole = $user->roles[0];
+    if ($userRole === 'subscriber') {
+      return home_url();
+    }
+  }
+  return $redirect_to;
+}
+
+add_filter('login_redirect', 'handleRedirection', 10, 3);
+add_filter('logout_redirect', 'handleRedirection', 10, 3);
+
+add_action('init', function () {
+  remove_post_type_support('conges-payes', 'editor');
+});
+
+add_filter('manage_conges-payes_posts_columns', function ($columns) {
+  $columns['date_de_debut'] = 'Date de début';
+  $columns['date_de_fin'] = 'Date de fin';
+  $columns['motif'] = 'Motif';
+  $columns['statut'] = 'Statut';
+  return $columns;
+});
+
+add_action('manage_conges-payes_posts_custom_column', function ($column, $post_id) {
+  switch ($column) {
+    case 'date_de_debut':
+      echo get_field('date_de_debut', $post_id);
+      break;
+    case 'date_de_fin':
+      echo get_field('date_de_fin', $post_id);
+      break;
+    case 'motif':
+      echo get_field('motif', $post_id);
+      break;
+    case 'statut':
+      echo get_field('statut', $post_id);
+      break;
+    default:
+      break;
+  }
+}, 10, 2);
+
+add_filter('default_title', function($title, $post) {
+    if ($post->post_type === 'conges-payes') {
+      $current_user = wp_get_current_user();
+      $title = 'Demande de congés payés de ' . $current_user->user_login;
+    }
+    return $title;
+}, 10, 2);
+
+// echo '<pre>';
+// var_dump( wp_get_current_user() );
+// echo '</pre>';

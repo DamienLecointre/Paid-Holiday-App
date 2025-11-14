@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 <main class="container">
   <?php
-  $current_user = wp_get_current_user();
-  $prenom = ($current_user->ID !== 0) ? $current_user->user_firstname : '';
+  $current_user = wp_get_current_user(); 
+  if($current_user) {
+    $prenom = $current_user->user_firstname ?: $current_user->user_login;
+  }
   ?>
 
   <?php if (isset($_GET['success'])): ?>
     <div class="message success">Compte créé avec succès</div>
   <?php endif; ?>
 
-  <div class="login-signup-container">
+  <!-- <div class="login-signup-container">
     <div class="login-wrapper">
       <div class="icon-container">
         <div class="icon-wrapper">
@@ -38,7 +40,7 @@
         <button id="signup" type="submit" class="btn-blue-square-end">Créer mon compte</button>
       </form>
     </div>
-  </div>
+  </div> -->
 
   <div class="container-wrapper">
 
@@ -91,7 +93,8 @@
               </div>
             </div>
           <?php else: ?>
-            <button id="login" class="btn-blue-rounded-end">Se connecter</button>
+            <a class="btn-blue-rounded-end" href="<?php echo wp_login_url()?>">Se connecter</a>
+            <!-- <button id="login" class="btn-blue-rounded-end">Se connecter</button> -->
           <?php endif ?>
         </div>
 
@@ -99,7 +102,7 @@
           <h5 class="link">profil</h5>
           <div class="logout-container link">
             <i class="fa-solid fa-power-off"></i>
-            <a href="/paid-holiday-app/php/logout.php">Se déconnecter</a>
+            <a href="<?php echo wp_logout_url()?>">Se déconnecter</a>
           </div>
         </div>
 
